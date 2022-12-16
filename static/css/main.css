@@ -1,0 +1,165 @@
+body { 
+  background-color: whitesmoke;
+  font-family: monospace;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+    background-color:whitesmoke;
+    font-size: 24px;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+    padding:32px 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    padding: 20px;
+    color: #000000;
+    text-decoration: none;
+     }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    color:#335C81;
+  
+  }
+
+.hello {
+    overflow: hidden;
+    text-align: center;
+    font-size: 96px;
+    padding-top: 2.5em;
+    padding-bottom: 270px;
+}
+
+.wave {
+  padding: 0% 0% 20% 0%;
+  bottom: 0;
+}
+.wave svg{
+  height: inherit;
+  position: absolute;
+  animation-name: waves;
+  animation-iteration-count: infinite;
+  transform: scaleX(2);
+
+}
+.wave1 svg{
+  animation-duration: 14s;
+}
+.wave2 svg{
+  animation-duration: 15s;
+}
+.wave3 svg{
+  animation-duration: 13s;
+}
+.wave4 svg{
+  animation-duration: 11s;
+}
+.wave5 svg{
+  animation-duration: 10s;
+}
+.wave6 svg{
+  animation-duration: 12s;
+}
+
+@keyframes waves{
+  0% {
+    left: -10%;
+  }
+  50% {
+    left: 50%;
+  }
+  100%{
+    left:-10%;
+  }
+}
+
+.aboutme{
+  font-size: 24px;
+  padding: 5rem 5% 0 5%;
+}
+
+.resume{
+  background-color: #274060;
+  font-size: 24px;
+  color:#B4D2E7;
+  padding: 5%;
+  
+}
+.section {
+  background-color:#335C81;
+  padding: 1rem;
+  border-radius: 50px;
+  margin: 1rem 0;
+}
+
+.extend{
+  background-color: #274060;
+  padding: 100px;
+}
+.resume h1{
+  margin: 1rem 0;
+  background-color: #335C81;
+  padding: 1rem;
+  border-radius: 40px;
+}
+.resume h2{
+  margin-top: 0em;
+  width: fit-content;
+  color: #335C81;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 40px;
+}
+
+.projectcontent{
+  padding: 6rem 0;
+}
+.groupcontent{
+  font-size: 34px;
+  background-color: #274060;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.groupcontent a{
+  text-decoration: none;
+  color: #B4D2E7;
+  width: auto;
+  height: auto;
+}
+.group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  width:300px;
+  height:300px;
+  background-color: #335C81;
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 1rem;
+  
+}
+
+.groupcontent :hover{
+  background-color: #3b6b96;
+}
+
+.pcode{
+  background-color: #335C81;
+  padding: 3rem;
+}
+
