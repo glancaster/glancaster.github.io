@@ -1,5 +1,45 @@
-p {
+body { 
+    background-color: whitesmoke;
+    font-family: monospace;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  
+  }
+.hello {
+    border: 5px solid;
+    overflow: hidden;
+    font-size: 10vw;
     text-align: center;
+    height: 100vw;
+    padding-top: 50vw;
+
+
+
+}
+/* Style the top navigation bar */
+.topnav {
+    background-color:whitesmoke;
+    border: 5px solid;
     font-size: 24px;
-    background-color: lightblue;
+    text-align: center;
+    overflow: hidden;
+    padding:32px 0;
+    position: relative;
+    top: 0;
+    z-index: 99;
+    
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    padding: 20px;
+    border: 5px solid;
+    color: #000000;
+    text-decoration: none;
+     }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    color:#335C81;
+  
   }
