@@ -6,12 +6,12 @@ body {
   
   }
 .hello {
-    border: 5px solid;
     overflow: hidden;
     font-size: 10vw;
     text-align: center;
-    height: 100vw;
-    padding-top: 50vw;
+    height: 100%;
+    padding-top: 25vw;
+    padding-bottom: 25vw;
 
 
 
@@ -19,7 +19,6 @@ body {
 /* Style the top navigation bar */
 .topnav {
     background-color:whitesmoke;
-    border: 5px solid;
     font-size: 24px;
     text-align: center;
     overflow: hidden;
@@ -33,7 +32,6 @@ body {
   /* Style the topnav links */
   .topnav a {
     padding: 20px;
-    border: 5px solid;
     color: #000000;
     text-decoration: none;
      }
