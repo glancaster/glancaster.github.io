@@ -1,34 +1,45 @@
+* {
+  padding:0;
+  margin:0;
+}
+
+html, body {
+  height:100%;
+  
+  display:flex;
+  flex-direction:column;
+}
+
+body > * {
+  flex-shrink: 0;
+}
 
 body {
   margin: 0;
   font-family: monospace;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1 {
-  font-weight: 300;
+  font-weight: 4000;
   letter-spacing: 2px;
-  font-size: 5vw;
+  font-size: 50px;
 }
 
-p {
-  letter-spacing: 1px;
-  font-size: 14px;
-  color: black;
+a {
+  font-weight: 40000;
+  letter-spacing: 2px;
+  font-size: 30px;
 }
+
 
 .header {
   position: relative;
   text-align: center;
   background: whitesmoke;
   color: black;
-}
-
-.logo {
-  width: 50px;
-  fill: black;
-  padding-right: 15px;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .inner-header {
@@ -55,6 +66,12 @@ p {
   min-height: 100px;
   max-height: 300px;
 }
+
+.ocean {
+  background-color: #5595B0 ;
+  flex-grow: 1;
+}
+
 
 
 /* Animation */
@@ -97,6 +114,36 @@ p {
   }
 }
 
+/* Style the top navigation bar */
+.topnav {
+  background-color:whitesmoke;
+  font-size: 30px;
+
+  text-align: center;
+  overflow: hidden;
+  padding:32px 0;
+  position: relative;
+  top: 0;
+  z-index: 99;
+  
+}
+
+/* Style the topnav links */
+.topnav a {
+  padding: 20px;
+  color: #000000;
+  text-decoration: none;
+   }
+
+/* Change color on hover */
+.topnav a:hover {
+  color:#335C81;
+
+}
+
+
+
+
 /* /* Shrinking for mobile */
 @media (max-width: 768px) {
   .waves {
@@ -106,31 +153,12 @@ p {
   h1 {
     font-size: 24px;
   }
+  a{
+    font-size: 15px;
+  }
 }
 
 
-/* Style the top navigation bar */
-.topnav {
-    background-color:whitesmoke;
-    font-size: 24px;
-    text-align: center;
-    overflow: hidden;
-    padding:32px 0;
-    position: relative;
-    top: 0;
-    z-index: 99;
-    
-  }
+
+
   
-  /* Style the topnav links */
-  .topnav a {
-    padding: 20px;
-    color: #000000;
-    text-decoration: none;
-     }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    color:#335C81;
-  
-  }
