@@ -1,18 +1,21 @@
 let flock;
+var numWaves = 10;
+var numBoids = 100;
 
 function windowResized() {
 	//console.log('resized');
-	resizeCanvas(windowWidth, windowHeight-windowHeight/3);
+	resizeCanvas(windowWidth, windowHeight);
   }
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight-windowHeight/3);
+  createCanvas(windowWidth, windowHeight);
+  
 
   flock = new Flock();
   // Add an initial set of boids into the system
-  for (let i = 0; i < 100; i++) {
-    let b = new Boid(width / 2,height / 2);
+  for (let i = 0; i < numBoids; i++) {
+    let b = new Boid(width / 2,0);
     flock.addBoid(b);
   }
 };
@@ -20,7 +23,28 @@ function setup() {
 function draw() {
   background(245,245,245);
   flock.run();
+  randomSeed(0);
+  for(var i = 0 ; i < numWaves; i++){
+	fill(85, 149, 176,map(i,0,numWaves,192,32));
+	noStroke();
+	drawSineWave(2*PI,0.00005 * (random(0,numWaves)),10 + (20 * random(0,numWaves)),20,width,height*2.5/3);
+  }
+  fill(255);
 }
+function drawSineWave(radians,speed,amplitude,detail,size,y){
+	beginShape();
+	vertex(0,height);//fix to bottom
+	//compute the distance between each point
+	var xoffset = size / detail;
+	var angleIncrement = radians / detail;
+	for(var i = 0 ; i <= detail; i++){
+	  var px = xoffset * i;
+	  var py = y + (sin((millis() * speed) + angleIncrement * i) * amplitude);
+	  vertex(px,py);
+	}
+	vertex(size,height);//fix to bottom
+	endShape();
+  }
 
 // The Nature of Code
 // Daniel Shiffman
@@ -77,14 +101,18 @@ function Flock() {
 	let sep = this.separate(boids);   // Separation
 	let ali = this.align(boids);      // Alignment
 	let coh = this.cohesion(boids);   // Cohesion
+	//let wav = this.wavesteer(boids); // Wave Separation
 	// Arbitrarily weight these forces
 	sep.mult(1.5);
 	ali.mult(1.0);
 	coh.mult(1.0);
+	//wav.mult(1.5);
+
 	// Add the force vectors to acceleration
 	this.applyForce(sep);
 	this.applyForce(ali);
 	this.applyForce(coh);
+	//this.applyForce(wav);
   }
   
   // Method to update location
@@ -169,6 +197,8 @@ function Flock() {
 	}
 	return steer;
   }
+
+  
   
   // Alignment
   // For every nearby boid in the system, calculate the average velocity

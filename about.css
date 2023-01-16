@@ -1,0 +1,107 @@
+* {
+    padding:0;
+    margin:0;
+  }
+  
+  html, body {
+    height:100%;
+    
+    display:flex;
+    flex-direction:column;
+  }
+  
+  body > * {
+    flex-shrink: 0;
+  }
+  
+  body {
+    font-family: monospace;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  h1 {
+    font-weight: 4000;
+    letter-spacing: 2px;
+    font-size: 50px;
+  }
+  
+  a {
+    font-weight: 40000;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  
+  .wavetop {
+    margin-bottom: -10px;
+  }
+
+  .content {
+    background-color: #5595B0 ;
+    display: flex;
+    padding-top: 1vh;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    color: whitesmoke;
+    border-radius: 1rem;
+    background-color: #4c869e;
+    width: calc((100% / 3) - 3rem);
+    padding: 1rem;
+    flex-grow: 1;
+  }
+
+  .ocean {
+    background-color: #5595B0 ;
+    flex-grow: 1;
+  }
+  
+  
+
+  /* Style the top navigation bar */
+  .topnav {
+    background-color:whitesmoke;
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+    padding:32px 0;
+    position: relative;
+    top: 0;
+    z-index: 99;
+    
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    padding: 20px;
+    color: #000000;
+    text-decoration: none;
+     }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    color:#335C81;
+  
+  }
+  
+  
+  
+  
+  /* /* Shrinking for mobile */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 24px;
+    }
+    a{
+      font-size: 15px;
+    }
+  }
+  
+  
+  
+  
+    
