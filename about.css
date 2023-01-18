@@ -15,16 +15,11 @@
   }
   
   body {
+    margin: 0;
     font-family: monospace;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
-  }
-  
-  h1 {
-    font-weight: 4000;
-    letter-spacing: 2px;
-    font-size: 50px;
   }
   
   a {
@@ -40,7 +35,7 @@
   .content {
     background-color: #5595B0 ;
     display: flex;
-    padding-top: 1vh;
+    padding: 1vh 10% 1vh 10%;
     gap: 20px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -48,11 +43,16 @@
 
   .item {
     color: whitesmoke;
+    font-size: 20px;
     border-radius: 1rem;
     background-color: #4c869e;
-    width: calc((100% / 3) - 3rem);
+    width: calc((100% / 1) - 25%);
     padding: 1rem;
     flex-grow: 1;
+  }
+
+  h1 {
+    padding: 1vh;
   }
 
   .ocean {
@@ -61,34 +61,33 @@
   }
   
   
+/* Style the top navigation bar */
+.topnav {
+  background-color:whitesmoke;
+  font-size: 30px;
 
-  /* Style the top navigation bar */
-  .topnav {
-    background-color:whitesmoke;
-    font-size: 30px;
-    text-align: center;
-    overflow: hidden;
-    padding:32px 0;
-    position: relative;
-    top: 0;
-    z-index: 99;
-    
-  }
+  text-align: center;
+  overflow: hidden;
+  padding:32px 0;
+  position: relative;
+  top: 0;
+  z-index: 99;
   
-  /* Style the topnav links */
-  .topnav a {
-    padding: 20px;
-    color: #000000;
-    text-decoration: none;
-     }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    color:#335C81;
-  
-  }
-  
-  
+}
+
+/* Style the topnav links */
+.topnav a {
+  padding: 20px;
+  color: #000000;
+  text-decoration: none;
+   }
+
+/* Change color on hover */
+.topnav a:hover {
+  color:#335C81;
+
+}
+
   
   
   /* /* Shrinking for mobile */
