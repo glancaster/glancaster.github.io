@@ -52,8 +52,7 @@ a {
   flex-grow: 1;
 }
 .item:hover {
-  background-color: #223B46;
-  width: calc((100%) - 50%);
+  background-color: hsl(198, 35%, 20%);
 }
 
 h1 {
