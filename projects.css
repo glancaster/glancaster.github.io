@@ -36,14 +36,19 @@ a {
   background-color: #5595B0 ;
   display: flex;
   padding: 1vh 10% 1vh 10%;
-  gap: 20px;
+  gap: 30px;
   flex-direction: row;
   flex-wrap: wrap;
 }
+.content a {
+  padding: 10px;
+  color:whitesmoke;
+  text-decoration: none;
+}
 
 .item {
+
   color: whitesmoke;
-  font-size: 10px;
   border-radius: 1rem;
   background-color: #4c869e;
   width: calc((100% / 4));
@@ -58,6 +63,22 @@ a {
 h1 {
   padding: 1vh;
 }
+
+.thesisresearch {
+  font-size: x-large;
+  color: whitesmoke;
+  background-color: #4c869e;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+img {
+  margin: auto;
+  display: block;
+  align-items: center;
+  padding: 20px;
+}
+
 
 .ocean {
   background-color: #5595B0 ;
