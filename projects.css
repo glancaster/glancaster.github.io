@@ -44,15 +44,15 @@ a {
   padding: 10px;
   color:whitesmoke;
   text-decoration: none;
+  font-size: x-large;
 }
 
 .item {
-
   color: whitesmoke;
   border-radius: 1rem;
   background-color: #4c869e;
   width: calc((100% / 4));
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   flex-grow: 1;
 }
@@ -65,6 +65,13 @@ h1 {
 }
 
 .thesisresearch {
+  font-size: x-large;
+  color: whitesmoke;
+  background-color: #4c869e;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.projecteuler {
   font-size: x-large;
   color: whitesmoke;
   background-color: #4c869e;
