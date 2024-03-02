@@ -1,13 +1,14 @@
 * {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
-html, body {
-  height:100%;
-  
-  display:flex;
-  flex-direction:column;
+html,
+body {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 body > * {
@@ -33,7 +34,7 @@ a {
 }
 
 .content {
-  background-color: #5595B0 ;
+  background-color: #5595b0;
   display: flex;
   padding: 1vh 10% 1vh 10%;
   gap: 30px;
@@ -42,7 +43,7 @@ a {
 }
 .content a {
   padding: 10px;
-  color:whitesmoke;
+  color: whitesmoke;
   text-decoration: none;
   font-size: x-large;
 }
@@ -86,53 +87,60 @@ img {
   padding: 20px;
 }
 
-
 .ocean {
-  background-color: #5595B0 ;
+  background-color: #5595b0;
   flex-grow: 1;
 }
 
-
 /* Style the top navigation bar */
 .topnav {
-background-color:whitesmoke;
-font-size: 30px;
+  background-color: whitesmoke;
+  font-size: 30px;
 
-text-align: center;
-overflow: hidden;
-padding:32px 0;
-position: relative;
-top: 0;
-z-index: 99;
-
+  text-align: center;
+  overflow: hidden;
+  padding: 32px 0;
+  position: relative;
+  top: 0;
+  z-index: 99;
 }
 
 /* Style the topnav links */
 .topnav a {
-padding: 20px;
-color: #000000;
-text-decoration: none;
- }
+  padding: 20px;
+  color: #000000;
+  text-decoration: none;
+}
 
 /* Change color on hover */
 .topnav a:hover {
-color:#335C81;
-
+  color: #335c81;
 }
-
-
+.language-Python {
+  background-color: #22323a;
+  width: 95%;
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0; /* Adjust the value as needed */
+  border-bottom-right-radius: 0;
+}
+.language-code {
+  background-color: #22323a;
+  width: 95%;
+  padding: 2rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 1rem; /* Adjust the value as needed */
+  border-bottom-right-radius: 1rem;
+}
 
 /* /* Shrinking for mobile */
 @media (max-width: 768px) {
   h1 {
     font-size: 24px;
   }
-  a{
+  a {
     font-size: 15px;
   }
 }
-
-
-
-
-  
