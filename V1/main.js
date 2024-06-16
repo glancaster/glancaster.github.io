@@ -3,7 +3,6 @@ const sketches = [
   "sketches/lsystem.js",
   "sketches/flock.js",
   "sketches/gameoflife.js",
-  "sketches/bounceballs.js",
   "sketches/brownian.js",
   "sketches/particle.js",
 ];

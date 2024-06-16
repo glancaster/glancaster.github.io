@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ul.style.padding = "0";
 
   ul.querySelectorAll("li").forEach(function (li) {
-    li.style.padding = "1.5rem 4rem 1rem";
+    li.style.padding = "1.5rem 2rem 1rem";
     li.style.borderRadius = "1rem";
     li.style.display = "inline";
     li.style.marginRight = "2rem";

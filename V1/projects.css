@@ -72,7 +72,7 @@ h1 {
   border-radius: 1rem;
   padding: 1rem;
 }
-.projecteuler {
+.projects {
   font-size: x-large;
   color: whitesmoke;
   background-color: #4c869e;
@@ -115,24 +115,6 @@ img {
 /* Change color on hover */
 .topnav a:hover {
   color: #335c81;
-}
-.language-Python {
-  background-color: #22323a;
-  width: 95%;
-  padding: 2rem;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 0; /* Adjust the value as needed */
-  border-bottom-right-radius: 0;
-}
-.language-code {
-  background-color: #22323a;
-  width: 95%;
-  padding: 2rem;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 1rem; /* Adjust the value as needed */
-  border-bottom-right-radius: 1rem;
 }
 
 /* /* Shrinking for mobile */
