@@ -58,3 +58,25 @@ footer {
   position: fixed;
   width: 100%;
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header,
+  footer {
+    padding: 20px 0;
+  }
+
+  header ul,
+  footer ul {
+    gap: 10px;
+  }
+
+  header a,
+  footer a {
+    padding: 10px 15px;
+  }
+}
