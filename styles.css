@@ -28,29 +28,46 @@ footer {
 }
 
 header ul,
-footer ul {
+footer ul,
+main ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 header a,
 footer a {
   background: #333;
   color: lightgray;
-  padding: 10px 30px;
+  padding: 10px 50px;
   border-radius: 25px; /* Rounded corners */
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 header a:hover,
-footer a:hover {
+footer a:hover,
+main li:hover {
   background-color: rgb(52, 79, 47); /* Darker shade on hover */
 }
 
 main {
+  color: lightgray;
   margin: 20px 0;
+}
+main ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+main li {
+  text-wrap: wrap;
+  background: #333;
+  color: lightgray;
+  padding: 30px;
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 footer {
@@ -62,7 +79,6 @@ footer {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
   body {
-    font-size: 12px;
     padding: 10px;
   }
 
@@ -74,6 +90,7 @@ footer {
   header ul,
   footer ul {
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   header a,
