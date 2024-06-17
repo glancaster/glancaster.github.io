@@ -62,6 +62,7 @@ footer {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
   body {
+    font-size: 12px;
     padding: 10px;
   }
 
