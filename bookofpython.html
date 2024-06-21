@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graham Lancaster | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="prism.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html">Graham Lancaster</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </header>
+    <main>
+      <h1>Book of Python</h1>
+      <div class="book">
+        <div class="toc">
+          <h2>Table of Contents</h2>
+          <ul id="toc-list"></ul>
+        </div>
+        <div class="content">
+          <ul>
+            <li>
+              <h2 id="#overview">Overview</h2>
+              <p2
+                >This book provides practical insights into Python programming,
+                including code snippets, essential libraries, and language
+                nuances. It's highly recommended to code along with the examples
+                provided to enhance your learning experience. Browse table of
+                contents to learn what's currently offered.
+              </p2>
+              <ul>
+                <li>
+                  <h2 id="about">About the Author</h2>
+
+                  <p2
+                    >I've been self-teaching coding since 2019, discovering its
+                    potential to craft creative projects that enhance daily
+                    life. While Python is my primary language, I also have
+                    experience in C, C++, C#, LabVIEW, Matlab, and HTML/CSS.
+                    Currently, I'm seeking to expand my expertise and undertake
+                    projects in C/C++.</p2
+                  >
+                </li>
+                <li>
+                  <h2 id="setup">Setup</h2>
+                  <p2
+                    >As of writing, I utilize Python 3.9+ and Visual Studio Code
+                    for my coding endeavors.</p2
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2 id="Installation">Installation</h2>
+            </li>
+            <li>
+              <h2 id="builtins">Built - Ins</h2>
+              <p2
+                >The python language comes with its own standard set of
+                libraries when you install any version of Python. These
+                libraries range from computer utilities, Graphical User
+                Interfaces, or string manipulation.</p2
+              >
+              <ul>
+                <li>
+                  <h2 id="strings">Strings</h2>
+
+                  <ul>
+                    <li>
+                      <h2 id="printastring">Print a String</h2>
+                      <p2
+                        >Here's a basic Hello World that you can write in
+                        Python. This will get printed out into the window below.
+                      </p2>
+                      <pre class="line-numbers">
+  <code class="language-python">print("Hello World")        # "Hello World"
+  print("Hello" + "World")    # No Space Betwen "Hello" and "World"
+  print("Hello", "World")     # Space Between "Hello" and "World"</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">Hello World
+HelloWorld
+Hello World</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="printavariable">Print a Variable</h2>
+                      <p2
+                        >You can pass in variables to be printed out using
+                        f-strings. Also, you can control how the output will
+                        look like. This is very helpful for debugging code.
+                      </p2>
+                      <pre class="line-numbers">
+  <code class="language-python">message = "Hello"
+  number = 39.239
+  print(f"{message} World")
+  print(f"{number}")          # Read in number as is
+  print(f"{number:.1f}")      # Limit number to one decimal place
+  print(f"{number + 10}")     # Evalulate inside the brackets</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">Hello World
+39.239
+39.2
+49.239</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="usingoperator">Using Operators</h2>
+                      <p2>The modulo % operator can be used as well. </p2>
+                      <pre class="line-numbers">
+  <code class="language-python">name = "Brad"
+  age = 29
+  print("Hello %s" % name)
+  print("%s is %s years old" % (name, age))
+  print("Age: %(age)s\nAge: %(age)5s" % {"age" : age})</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">Hello Brad      
+Brad is 29 years old
+Age: 29
+Age:    29</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="specialstringoperations">
+                        Other special string operations
+                      </h2>
+                      <p2
+                        >You can modify the look of the outcome however you
+                        want.</p2
+                      >
+                      <pre class="line-numbers">
+  <code class="language-python">largenumber = 183984943.34893
+  print(f"${largenumber:,.2f}")
+  print(f"{largenumber:{"_"}}")
+  print(f"{largenumber= }")
+  print(f"{"Title":-^30}")</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">$183,984,943.35
+183_984_943.34893
+largenumber= 183984943.34893
+------------Title-------------</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="datetimestrings">Date Time Strings</h2>
+                      <p2
+                        >If you're working with dates or timeseries data, these
+                        are helpful.</p2
+                      >
+                      <pre class="line-numbers">
+  <code class="language-python">date = (9,5,2023)
+  print(f"{date[0]:02}/{date[1]:02}/{date[2]}")</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">09/05/2023</code></pre>
+                      <pre class="line-numbers">
+  <code class="language-python">from datetime import datetime
+  date = datetime(2043, 3, 15, 16, 23)
+  print(f"{date:%m/%d/%Y} at {date:%I:%M %p} which is on a {date:%A} in {date:%B}")</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">03/15/2043 at 04:23 PM which is on a Sunday in March</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="findingstrings">Finding Strings</h2>
+                      <p2
+                        >Find the index where the character of the string first
+                        occurs.</p2
+                      >
+                      <pre class="line-numbers">
+  <code class="language-python">message = "Hello, it is nice out today"
+  print(message.find("nice"))
+  print(message.find("rainy"))</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">13
+-1</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="regex">Regex</h2>
+                      <p2
+                        >Regex is a very powerful tool to filter strings in a
+                        short manner.</p2
+                      >
+                      <pre class="line-numbers">
+  <code class="language-python">import re
+  message = "The boat trip went by quickly"
+  re.findall(r"\w+ly\b", message)   # return the words that end in '-ly' in the message</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">['quickly']</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="splittingstrings">Splitting Messages</h2>
+                      <p2
+                        >If you wanted to convert a message into a list, here
+                        are some methods</p2
+                      >
+                      <pre class="line-numbers">
+  <code class="language-python">import re 
+  message = "Hey John, how are you"
+  print(message.split(','))
+  print(message.split())
+  print(re.split(' |, ', message))</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">['Hey John', ' how are you']
+['Hey', 'John,', 'how', 'are', 'you']
+['Hey', 'John', 'how', 'are', 'you']</code></pre>
+                    </li>
+                    <li>
+                      <h2 id="closestmatch">Closest Match</h2>
+                      <p2>Returns the item closest to it in the list.</p2>
+                      <pre class="line-numbers">
+  <code class="language-python">from difflib import get_close_matches
+  dogs = ['Frenchie', 'Lab', 'Corgi', 'Bulldog']
+  get_close_matches('French', dogs)</code></pre>
+                      <pre
+                        class="command-line"
+                        data-prompt="   >>"
+                      ><code class="language-none">['Frenchie']</code></pre>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h2 id="Numbers">Numbers</h2>
+                  <p2>MORE COMING SOON</p2>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ul>
+        <li><a>&copy; 2024 Graham Lancaster</a></li>
+      </ul>
+    </footer>
+    <script src="prism.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function buildToc(listElement, tocElement) {
+          const items = listElement.children;
+          for (const item of items) {
+            if (item.tagName.toLowerCase() === "li") {
+              const h2 = item.querySelector("h2");
+              if (h2) {
+                const listItem = document.createElement("li");
+                const link = document.createElement("a");
+                link.href = `#${h2.id}`;
+                link.textContent = h2.textContent;
+                listItem.appendChild(link);
+                tocElement.appendChild(listItem);
+
+                const nestedList = item.querySelector("ul");
+                if (nestedList) {
+                  const nestedTocList = document.createElement("ul");
+                  listItem.appendChild(nestedTocList);
+                  buildToc(nestedList, nestedTocList);
+                }
+              }
+            }
+          }
+        }
+
+        const mainList = document.querySelector(".content > ul");
+        const tocList = document.getElementById("toc-list");
+        buildToc(mainList, tocList);
+      });
+    </script>
+  </body>
+</html>

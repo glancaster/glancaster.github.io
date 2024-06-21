@@ -12,16 +12,63 @@ li {
 
 /* Apply a basic style */
 body {
+  color: lightgray;
   background-image: url("sources/topomapblack.jpg");
-  background-size: 100%;
+  background-size: auto;
   font-family: monospace, sans-serif;
   line-height: 1.6;
   padding: 15px;
 }
+.book {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
 
+.toc {
+  width: 20%;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.toc ul,
+.content ul {
+  padding: 0;
+  margin: 0 10px;
+}
+
+.toc li,
+.content li {
+  margin: 0px 20px;
+  list-style: decimal-leading-zero;
+}
+
+.toc a {
+  text-decoration: none;
+  color: lightgray;
+}
+.toc a:hover {
+  text-decoration: underline;
+}
+.content {
+  width: 80%;
+  background: #333;
+  padding: 20px;
+  border-radius: 25px;
+}
+.toggle-btn {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+.nested {
+  display: none; /* Initially hide the nested lists */
+}
 header,
-footer {
-  color: #fff;
+footer,
+.projectlist {
+  color: lightgray;
   padding: 10px 0;
   text-align: center;
   border-radius: 25px;
@@ -29,14 +76,15 @@ footer {
 
 header ul,
 footer ul,
-main ul {
+.projectlist ul {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
 
 header a,
-footer a {
+footer a,
+.projectlist a {
   background: #333;
   color: lightgray;
   padding: 10px 50px;
@@ -47,29 +95,22 @@ footer a {
 
 header a:hover,
 footer a:hover,
-main li:hover {
+.projectlist a:hover {
   background-color: rgb(52, 79, 47); /* Darker shade on hover */
 }
 
-main {
-  color: lightgray;
-  margin: 20px 0;
-}
-main ul {
-  display: flex;
+.projectlist ul {
   flex-wrap: wrap;
   flex-direction: row;
 }
-main li {
-  text-wrap: wrap;
+.projectlist a {
   background: #333;
-  color: lightgray;
-  padding: 30px;
+  text-wrap: wrap;
+  text-align: center;
+  flex: auto;
   border-radius: 25px; /* Rounded corners */
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  padding: 50px;
 }
-
 footer {
   bottom: 0;
   position: fixed;
@@ -97,4 +138,19 @@ footer {
   footer a {
     padding: 10px 15px;
   }
+}
+.code-container {
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: large;
+}
+code,
+pre {
+  border-radius: 15px;
+  margin: 0;
+  padding: 0;
+}
+.h1js {
+  background-color: #1a1a1a;
 }
