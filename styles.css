@@ -24,6 +24,10 @@ body {
   width: 100%;
   gap: 20px;
 }
+.book a {
+  text-decoration: underline;
+  color: lightgray;
+}
 
 .toc {
   width: 20%;

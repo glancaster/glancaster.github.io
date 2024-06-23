@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Graham Lancaster | Home</title>
+    <title>Graham Lancaster | Book of Python</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="prism.css" rel="stylesheet" />
   </head>
@@ -38,8 +38,8 @@
                   <h2 id="about">About the Author</h2>
 
                   <p2
-                    >I've been self-teaching coding since 2019, discovering its
-                    potential to craft creative projects that enhance daily
+                    >I've been teaching myself coding since 2019, discovering
+                    its potential to craft creative projects that enhance daily
                     life. While Python is my primary language, I also have
                     experience in C, C++, C#, LabVIEW, Matlab, and HTML/CSS.
                     Currently, I'm seeking to expand my expertise and undertake
@@ -57,9 +57,30 @@
             </li>
             <li>
               <h2 id="Installation">Installation</h2>
+              <p2
+                >To install the python language, start by heading to the
+                <a href="https://www.python.org/">Official Python Website</a>.
+                Once there, select the version of Python that you want to work
+                on. Keep in mind that if you want to explore external libraries
+                in the future, not all libraries are up-to-date to the latest
+                version. Follow the installation instructions for your specific
+                operating system. For Windows, make sure you select the box to
+                "Add Python to PATH" before continuing the rest of installation.
+                After installation, to check that you did it right, open your
+                command terminal and type in the following:
+              </p2>
+              <pre
+                class="command-line"
+                data-prompt="C:\Users\Graham>"
+              ><code class="language-none">python --version</code></pre>
+              <p2
+                >If you see the version that you selected then you are good to
+                go. Check out some IDEs (Integrated Development Environment) to
+                write some to follow along. Happy Coding!</p2
+              >
             </li>
             <li>
-              <h2 id="builtins">Built - Ins</h2>
+              <h2 id="basics">Basics</h2>
               <p2
                 >The python language comes with its own standard set of
                 libraries when you install any version of Python. These
@@ -72,7 +93,7 @@
 
                   <ul>
                     <li>
-                      <h2 id="printastring">Print a String</h2>
+                      <h3 id="printastring">Print a String</h3>
                       <p2
                         >Here's a basic Hello World that you can write in
                         Python. This will get printed out into the window below.
@@ -89,7 +110,7 @@ HelloWorld
 Hello World</code></pre>
                     </li>
                     <li>
-                      <h2 id="printavariable">Print a Variable</h2>
+                      <h3 id="printavariable">Print a Variable</h3>
                       <p2
                         >You can pass in variables to be printed out using
                         f-strings. Also, you can control how the output will
@@ -111,7 +132,7 @@ Hello World</code></pre>
 49.239</code></pre>
                     </li>
                     <li>
-                      <h2 id="usingoperator">Using Operators</h2>
+                      <h3 id="usingoperator">Using Operators</h3>
                       <p2>The modulo % operator can be used as well. </p2>
                       <pre class="line-numbers">
   <code class="language-python">name = "Brad"
@@ -128,9 +149,9 @@ Age: 29
 Age:    29</code></pre>
                     </li>
                     <li>
-                      <h2 id="specialstringoperations">
+                      <h3 id="specialstringoperations">
                         Other special string operations
-                      </h2>
+                      </h3>
                       <p2
                         >You can modify the look of the outcome however you
                         want.</p2
@@ -150,7 +171,7 @@ largenumber= 183984943.34893
 ------------Title-------------</code></pre>
                     </li>
                     <li>
-                      <h2 id="datetimestrings">Date Time Strings</h2>
+                      <h3 id="datetimestrings">Date Time Strings</h3>
                       <p2
                         >If you're working with dates or timeseries data, these
                         are helpful.</p2
@@ -172,7 +193,7 @@ largenumber= 183984943.34893
                       ><code class="language-none">03/15/2043 at 04:23 PM which is on a Sunday in March</code></pre>
                     </li>
                     <li>
-                      <h2 id="findingstrings">Finding Strings</h2>
+                      <h3 id="findingstrings">Finding Strings</h3>
                       <p2
                         >Find the index where the character of the string first
                         occurs.</p2
@@ -188,7 +209,7 @@ largenumber= 183984943.34893
 -1</code></pre>
                     </li>
                     <li>
-                      <h2 id="regex">Regex</h2>
+                      <h3 id="regex">Regex</h3>
                       <p2
                         >Regex is a very powerful tool to filter strings in a
                         short manner.</p2
@@ -203,7 +224,7 @@ largenumber= 183984943.34893
                       ><code class="language-none">['quickly']</code></pre>
                     </li>
                     <li>
-                      <h2 id="splittingstrings">Splitting Messages</h2>
+                      <h3 id="splittingstrings">Splitting Messages</h3>
                       <p2
                         >If you wanted to convert a message into a list, here
                         are some methods</p2
@@ -222,7 +243,7 @@ largenumber= 183984943.34893
 ['Hey', 'John', 'how', 'are', 'you']</code></pre>
                     </li>
                     <li>
-                      <h2 id="closestmatch">Closest Match</h2>
+                      <h3 id="closestmatch">Closest Match</h3>
                       <p2>Returns the item closest to it in the list.</p2>
                       <pre class="line-numbers">
   <code class="language-python">from difflib import get_close_matches
@@ -240,6 +261,224 @@ largenumber= 183984943.34893
                   <p2>MORE COMING SOON</p2>
                 </li>
               </ul>
+            </li>
+            <li>
+              <h2 id="standardlibrary">Standard Libraries</h2>
+              <p2
+                >Standard Library for Python 3.9. The goal is to go through each
+                one with its use case and useful examples.</p2
+              >
+              <ul>
+                <h2></h2>
+                <li><h2>string</h2></li>
+                <li><h2>re</h2></li>
+                <li><h2>difflib</h2></li>
+                <li><h2>textwrap</h2></li>
+                <li><h2>unicodedata</h2></li>
+                <li><h2>stringprep</h2></li>
+                <li><h2>readline</h2></li>
+                <li><h2>rlcompleter</h2></li>
+                <li><h2>struct</h2></li>
+                <li><h2>codecs</h2></li>
+                <li><h2>datetime</h2></li>
+                <li><h2>zoneinfo</h2></li>
+                <li><h2>calendar</h2></li>
+                <li><h2>collections</h2></li>
+                <li><h2>heapq</h2></li>
+                <li><h2>bisect</h2></li>
+                <li><h2>array</h2></li>
+                <li><h2>weakref</h2></li>
+                <li><h2>types</h2></li>
+                <li><h2>copy</h2></li>
+                <li><h2>pprint</h2></li>
+                <li><h2>reprlib</h2></li>
+                <li><h2>enum</h2></li>
+                <li><h2>graphlib</h2></li>
+                <li><h2>numbers</h2></li>
+                <li><h2>math</h2></li>
+                <li><h2>cmath</h2></li>
+                <li><h2>decimal</h2></li>
+                <li><h2>fractions</h2></li>
+                <li><h2>random</h2></li>
+                <li><h2>statistics</h2></li>
+                <li><h2>itertools</h2></li>
+                <li><h2>functools</h2></li>
+                <li><h2>operator</h2></li>
+                <li><h2>pathlib</h2></li>
+                <li><h2>os.path</h2></li>
+                <li><h2>fileinput</h2></li>
+                <li><h2>stat</h2></li>
+                <li><h2>filecmp</h2></li>
+                <li><h2>tempfile</h2></li>
+                <li><h2>glob</h2></li>
+                <li><h2>fnmatch</h2></li>
+                <li><h2>linecache</h2></li>
+                <li><h2>shutil</h2></li>
+                <li><h2>pickle</h2></li>
+                <li><h2>copyreg</h2></li>
+                <li><h2>shelve</h2></li>
+                <li><h2>marshal</h2></li>
+                <li><h2>dbm</h2></li>
+                <li><h2>sqlite3</h2></li>
+                <li><h2>zlib</h2></li>
+                <li><h2>gzip</h2></li>
+                <li><h2>bz2</h2></li>
+                <li><h2>lzma</h2></li>
+                <li><h2>zipfile</h2></li>
+                <li><h2>tarfile</h2></li>
+                <li><h2>csv</h2></li>
+                <li><h2>configparser</h2></li>
+                <li><h2>netrc</h2></li>
+                <li><h2>plistlib</h2></li>
+                <li><h2>hashlib</h2></li>
+                <li><h2>hmac</h2></li>
+                <li><h2>secrets</h2></li>
+                <li><h2>os</h2></li>
+                <li><h2>io</h2></li>
+                <li><h2>time</h2></li>
+                <li><h2>argparse</h2></li>
+                <li><h2>getopt</h2></li>
+                <li><h2>logging</h2></li>
+                <li><h2>getpass</h2></li>
+                <li><h2>curses</h2></li>
+                <li><h2>platform</h2></li>
+                <li><h2>errno</h2></li>
+                <li><h2>ctypes</h2></li>
+                <li><h2>threading</h2></li>
+                <li><h2>multiprocessing</h2></li>
+                <li><h2>concurrent</h2></li>
+                <li><h2>concurrent.futures</h2></li>
+                <li><h2>subprocess</h2></li>
+                <li><h2>sched</h2></li>
+                <li><h2>queue</h2></li>
+                <li><h2>contextvars</h2></li>
+                <li><h2>_thread</h2></li>
+                <li><h2>asyncio</h2></li>
+                <li><h2>socket</h2></li>
+                <li><h2>ssl</h2></li>
+                <li><h2>select</h2></li>
+                <li><h2>selectors</h2></li>
+                <li><h2>signal</h2></li>
+                <li><h2>mmap</h2></li>
+                <li><h2>email</h2></li>
+                <li><h2>json</h2></li>
+                <li><h2>mailbox</h2></li>
+                <li><h2>mimetypes</h2></li>
+                <li><h2>base64</h2></li>
+                <li><h2>binhex</h2></li>
+                <li><h2>binascii</h2></li>
+                <li><h2>quopri</h2></li>
+                <li><h2>html</h2></li>
+                <li><h2>xml</h2></li>
+                <li><h2>webbrowser</h2></li>
+                <li><h2>wsgiref</h2></li>
+                <li><h2>urllib</h2></li>
+                <li><h2>http</h2></li>
+                <li><h2>ftplib</h2></li>
+                <li><h2>poplib</h2></li>
+                <li><h2>imaplib</h2></li>
+                <li><h2>smtplib</h2></li>
+                <li><h2>uuid</h2></li>
+                <li><h2>socketserver</h2></li>
+                <li><h2>xmlrpc</h2></li>
+                <li><h2>ipaddress</h2></li>
+                <li><h2>wave</h2></li>
+                <li><h2>colorsys</h2></li>
+                <li><h2>gettext</h2></li>
+                <li><h2>locale</h2></li>
+                <li><h2>turtle</h2></li>
+                <li><h2>cmd</h2></li>
+                <li><h2>shlex</h2></li>
+                <li><h2>tkinter</h2></li>
+                <li><h2>typing</h2></li>
+                <li><h2>pydoc</h2></li>
+                <li><h2>doctest</h2></li>
+                <li><h2>unittest</h2></li>
+                <li><h2>test</h2></li>
+                <li><h2>bdb</h2></li>
+                <li><h2>faulthandler</h2></li>
+                <li><h2>pdb</h2></li>
+                <li><h2>timeit</h2></li>
+                <li><h2>trace</h2></li>
+                <li><h2>tracemalloc</h2></li>
+                <li><h2>distutils</h2></li>
+                <li><h2>ensurepip</h2></li>
+                <li><h2>venv</h2></li>
+                <li><h2>zipapp</h2></li>
+                <li><h2>sys</h2></li>
+                <li><h2>sysconfig_</h2></li>
+                <li><h2>builtins_</h2></li>
+                <li><h2>__main__</h2></li>
+                <li><h2>warnings</h2></li>
+                <li><h2>dataclasses</h2></li>
+                <li><h2>contextlib</h2></li>
+                <li><h2>abc</h2></li>
+                <li><h2>atexit</h2></li>
+                <li><h2>traceback</h2></li>
+                <li><h2>__future__</h2></li>
+                <li><h2>gc__</h2></li>
+                <li><h2>inspect</h2></li>
+                <li><h2>site</h2></li>
+                <li><h2>code</h2></li>
+                <li><h2>codeop</h2></li>
+                <li><h2>zipimport</h2></li>
+                <li><h2>pkgutil</h2></li>
+                <li><h2>modulefinder</h2></li>
+                <li><h2>runpy</h2></li>
+                <li><h2>importlib</h2></li>
+                <li><h2>parser</h2></li>
+                <li><h2>ast</h2></li>
+                <li><h2>symtable</h2></li>
+                <li><h2>symbol</h2></li>
+                <li><h2>token</h2></li>
+                <li><h2>keyword</h2></li>
+                <li><h2>tokenize</h2></li>
+                <li><h2>pyclbr</h2></li>
+                <li><h2>py_compile</h2></li>
+                <li><h2>compileall</h2></li>
+                <li><h2>dis</h2></li>
+                <li><h2>pickletools</h2></li>
+                <li><h2>formatter</h2></li>
+                <li><h2>msvcrt</h2></li>
+                <li><h2>winreg</h2></li>
+                <li><h2>winsound</h2></li>
+                <li><h2>posix</h2></li>
+                <li><h2>pwd</h2></li>
+                <li><h2>grp</h2></li>
+                <li><h2>termios</h2></li>
+                <li><h2>tty</h2></li>
+                <li><h2>pty</h2></li>
+                <li><h2>fcntl</h2></li>
+                <li><h2>resource</h2></li>
+                <li><h2>syslog</h2></li>
+                <li><h2>aifc</h2></li>
+                <li><h2>asynchat</h2></li>
+                <li><h2>asyncore</h2></li>
+                <li><h2>audioop</h2></li>
+                <li><h2>cgi</h2></li>
+                <li><h2>cgitb</h2></li>
+                <li><h2>chunk</h2></li>
+                <li><h2>crypt</h2></li>
+                <li><h2>imghdr</h2></li>
+                <li><h2>imp</h2></li>
+                <li><h2>mailcap</h2></li>
+                <li><h2>msilib</h2></li>
+                <li><h2>nis</h2></li>
+                <li><h2>nntplib</h2></li>
+                <li><h2>optparse</h2></li>
+                <li><h2>ossaudiodev</h2></li>
+                <li><h2>pipes</h2></li>
+                <li><h2>smtpd</h2></li>
+                <li><h2>sndhdr</h2></li>
+                <li><h2>spwd</h2></li>
+                <li><h2>sunau</h2></li>
+                <li><h2>telnetlib</h2></li>
+                <li><h2>uu</h2></li>
+                <li><h2>xdrlib</h2></li>
+              </ul>
+            </li>
+            <li>
+              <h2 id="externalibrary">External Libraries</h2>
             </li>
           </ul>
         </div>
