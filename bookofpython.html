@@ -433,11 +433,79 @@ print(matches)</code></pre>
                     data-prompt=" >>"
                   ><code class="language-none">['apple', 'ape']</code></pre>
                 </li>
-                <li><h2>textwrap</h2></li>
-                <li><h2>unicodedata</h2></li>
+                <li>
+                  <h2>textwrap</h2>
+                  <pre
+                    class="line-numbers"
+                  ><code class="language-python">import textwrap
+
+sample_text = "The quick brown fox jumps over the lazy dog."
+
+wrapped_text = textwrap.fill(sample_text, width=20)
+print(wrapped_text)
+</code></pre>
+                  <pre
+                    class="command-line"
+                    data-prompt=" >>"
+                  ><code class="language-none">The quick brown fox
+jumps over the lazy
+dog.</code></pre>
+                  <pre
+                    class="line-numbers"
+                  ><code class="language-python">import textwrap
+
+sample_text = """
+                The quick brown fox
+    jumps over the lazy dog.
+"""
+
+dedented_text = textwrap.dedent(sample_text).strip()
+print(dedented_text)</code></pre>
+                  <pre
+                    class="command-line"
+                    data-prompt=" >>"
+                  ><code class="language-none">The quick brown fox
+jumps over the lazy dog.</code></pre>
+                </li>
+                <li>
+                  <h2>unicodedata</h2>
+                  <pre
+                    class="line-numbers"
+                  ><code class="language-python">import unicodedata
+
+char = 'é'
+name = unicodedata.name(char)
+print(name) 
+name = 'LATIN SMALL LETTER E WITH ACUTE'
+char = unicodedata.lookup(name)
+print(char) </code></pre>
+                  <pre
+                    class="command-line"
+                    data-prompt=" >>"
+                  ><code class="language-none">LATIN SMALL LETTER E WITH ACUTE
+é</code></pre>
+                </li>
                 <li><h2>stringprep</h2></li>
                 <li><h2>struct</h2></li>
-                <li><h2>codecs</h2></li>
+                <li>
+                  <h2>codecs</h2>
+                  <pre
+                    class="line-numbers"
+                  ><code class="language-python">import codecs
+
+# Writing to a file with a specific encoding
+with codecs.open('examples/example.txt', 'w', encoding='utf-8') as f:
+f.write('Hello, world! こんにちは世界')
+
+# Reading from a file with a specific encoding
+with codecs.open('examples/example.txt', 'r', encoding='utf-8') as f:
+content = f.read()
+print(content)</code></pre>
+                  <pre
+                    class="command-line"
+                    data-prompt=" >>"
+                  ><code class="language-none">Hello, world! こんにちは世界</code></pre>
+                </li>
                 <li><h2>datetime</h2></li>
                 <li><h2>zoneinfo</h2></li>
                 <li><h2>calendar</h2></li>
