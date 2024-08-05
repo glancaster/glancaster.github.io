@@ -1,124 +1,80 @@
-/* Reset some default styles */
-body,
-h1,
-h2,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Apply a basic style */
-body {
+a {
   color: lightgray;
-  background-image: url("sources/topomapblack.jpg");
-  background-size: auto;
+  text-decoration: rgb(94, 94, 94) underline 3px;
+}
+body {
+  background: #333;
+  color: lightgray;
   font-family: monospace, sans-serif;
+  margin: 0;
   line-height: 1.6;
   padding: 15px;
 }
-.book {
-  display: flex;
-  width: 100%;
-  gap: 20px;
-}
-.book a {
-  text-decoration: underline;
-  color: lightgray;
-}
-
-.toc {
-  width: 20%;
-  background-color: #333;
-  padding: 20px;
-  border-radius: 25px;
-}
-
-.toc ul,
-.content ul {
-  padding: 0;
-  margin: 0 10px;
-}
-
-.toc li,
-.content li {
-  margin: 0px 20px;
-  list-style: decimal-leading-zero;
-}
-
-.toc a {
-  text-decoration: none;
-  color: lightgray;
-}
-.toc a:hover {
-  text-decoration: underline;
-}
-.content {
-  width: 80%;
-  background: #333;
-  padding: 20px;
-  border-radius: 25px;
-}
-.toggle-btn {
-  cursor: pointer;
-  color: #007bff;
-  text-decoration: underline;
-}
-.nested {
-  display: none; /* Initially hide the nested lists */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Places the canvas behind all other content */
 }
 header,
 footer,
-.projectlist {
+.content {
+  background-color: #333;
   color: lightgray;
-  padding: 10px 0;
-  text-align: center;
+  text-align: left;
+  padding: 1em 0;
   border-radius: 25px;
 }
-
+.content {
+  padding: 10px 20px;
+  margin-top: 30px;
+}
 header ul,
-footer ul,
-.projectlist ul {
+footer ul {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-
 header a,
-footer a,
-.projectlist a {
+footer a {
   background: #333;
-  color: lightgray;
   padding: 10px 50px;
-  border-radius: 25px; /* Rounded corners */
-  text-decoration: none;
+  border-radius: 25px;
   transition: background-color 0.3s ease;
 }
-
 header a:hover,
 footer a:hover,
-.projectlist a:hover {
+.items li:hover {
+  color: lightgray;
   background-color: rgb(52, 79, 47); /* Darker shade on hover */
 }
-
-.projectlist ul {
+.items a:hover {
+  color: lightgray;
+}
+.items {
+  padding: 2em;
+  text-align: center;
+}
+.items ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
   flex-direction: row;
 }
-.projectlist a {
+.items li {
   background: #333;
-  text-wrap: wrap;
-  text-align: center;
-  flex: auto;
+  padding: 10px;
   border-radius: 25px; /* Rounded corners */
-  padding: 50px;
+  transition: background-color 0.3s ease;
+  list-style: none;
 }
+
 footer {
   bottom: 0;
   position: fixed;
-  width: 100%;
+  width: 98%;
+  margin-bottom: 20px;
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -142,19 +98,4 @@ footer {
   footer a {
     padding: 10px 15px;
   }
-}
-.code-container {
-  background-color: #1a1a1a;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: large;
-}
-code,
-pre {
-  border-radius: 15px;
-  margin: 0;
-  padding: 0;
-}
-.h1js {
-  background-color: #1a1a1a;
 }

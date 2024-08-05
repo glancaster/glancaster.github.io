@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graham Lancaster | home</title>
+    <title>Graham Lancaster | projects</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script src="sources/mold.js"></script>
 </head>
 <body>
     <header>
@@ -20,9 +18,7 @@
         </ul>
     </header>
     <main>
-        <div class="home">
-        
-        </div>
+        Insert Content
     </main>
     <footer>
         <ul>© 2024 Graham Lancaster</ul>
