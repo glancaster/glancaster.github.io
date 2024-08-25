@@ -1,9 +1,9 @@
+
 a {
   color: lightgray;
   text-decoration: rgb(94, 94, 94) underline 3px;
 }
 body {
-  background: #333;
   color: lightgray;
   font-family: monospace, sans-serif;
   margin: 0;
@@ -25,7 +25,7 @@ footer,
   padding: 1em 0;
   border-radius: 25px;
 }
-.content {
+.content{
   padding: 10px 20px;
   margin-top: 30px;
 }
@@ -99,3 +99,4 @@ footer {
     padding: 10px 15px;
   }
 }
+
