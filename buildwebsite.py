@@ -14,7 +14,7 @@ baseTemplate = Template('''
     <title>Graham Lancaster | {{ title }}</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script src="sources/mold.js"></script>
+    <script src="sources/clouds.js"></script>
 </head>
 <body>
     <header>
@@ -44,7 +44,7 @@ homeTemplate = Template('''
     <title>Graham Lancaster | {{ title }}</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script src="sources/mold.js"></script>
+    <script src="sources/clouds.js"></script>
 </head>
 <body>
     <header>
@@ -74,7 +74,7 @@ itemTemplate = Template('''
     <title>Graham Lancaster | {{ title }}</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script src="sources/mold.js"></script>
+    <script src="sources/clouds.js"></script>
 </head>
 <body>
     <header>
