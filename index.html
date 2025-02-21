@@ -10,9 +10,20 @@
     <title>Graham Lancaster</title>
 
     <!-- config for our rust wasm binary. go to https://trunkrs.dev/assets/#rust for more customization -->
-    <link data-trunk rel="rust" data-wasm-opt="2" />
+    
+<script type="module" nonce="5Le99OwJ7f9CBEVWBV2kvQ==">
+import init, * as bindings from '/website-be6d5a0ec9eea5ca.js';
+const wasm = await init({ module_or_path: '/website-be6d5a0ec9eea5ca_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
     <!-- this is the base url relative to which other urls will be constructed. trunk will insert this from the public-url option -->
-    <base data-trunk-public-url />
+    <base href="/" />
 
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#404040">
@@ -103,7 +114,7 @@
             }
         }
     </style>
-</head>
+<link rel="modulepreload" href="/website-be6d5a0ec9eea5ca.js" crossorigin=anonymous integrity="sha384-LkS3l/eNl5lfXiAdN7SK50YQyvu0NLn1S6u3tMipaGa6LVDZSZ9S9WK6DYH7KS9M"><link rel="preload" href="/website-be6d5a0ec9eea5ca_bg.wasm" crossorigin=anonymous integrity="sha384-qZX3P/5/WaO/KbX5lyBVF/pfd4VbQ6FmxcZdqz2BS1lslidJ95hkMuEpykvaYNGc" as="fetch" type="application/wasm"></head>
 
 <body>
     <!-- The WASM code will resize the canvas dynamically -->
