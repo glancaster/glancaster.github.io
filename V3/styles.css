@@ -1,0 +1,102 @@
+
+a {
+  color: lightgray;
+  text-decoration: rgb(94, 94, 94) underline 3px;
+}
+body {
+  color: lightgray;
+  font-family: monospace, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  padding: 15px;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Places the canvas behind all other content */
+}
+header,
+footer,
+.content {
+  background-color: #333;
+  color: lightgray;
+  text-align: left;
+  padding: 1em 0;
+  border-radius: 25px;
+}
+.content{
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+header ul,
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+header a,
+footer a {
+  background: #333;
+  padding: 10px 50px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+header a:hover,
+footer a:hover,
+.items li:hover {
+  color: lightgray;
+  background-color: rgb(52, 79, 47); /* Darker shade on hover */
+}
+.items a:hover {
+  color: lightgray;
+}
+.items {
+  padding: 2em;
+  text-align: center;
+}
+.items ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.items li {
+  background: #333;
+  padding: 10px;
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+  list-style: none;
+}
+
+footer {
+  bottom: 0;
+  position: fixed;
+  width: 98%;
+  margin-bottom: 20px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header,
+  footer {
+    padding: 20px 0;
+  }
+
+  header ul,
+  footer ul {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  header a,
+  footer a {
+    padding: 10px 15px;
+  }
+}
+

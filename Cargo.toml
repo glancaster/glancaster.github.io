@@ -1,0 +1,9 @@
+[package]
+name = "website"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = { version = "0.31.0", features = ["default", "wgpu"] }
+wasm-bindgen = "0.2.100"
+wasm-bindgen-futures = "0.4.50"
