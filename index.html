@@ -114,7 +114,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             }
         }
     </style>
-<link rel="modulepreload" href="/website-be6d5a0ec9eea5ca.js" crossorigin=anonymous integrity="sha384-LkS3l/eNl5lfXiAdN7SK50YQyvu0NLn1S6u3tMipaGa6LVDZSZ9S9WK6DYH7KS9M"><link rel="preload" href="/website-be6d5a0ec9eea5ca_bg.wasm" crossorigin=anonymous integrity="sha384-qZX3P/5/WaO/KbX5lyBVF/pfd4VbQ6FmxcZdqz2BS1lslidJ95hkMuEpykvaYNGc" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/website-be6d5a0ec9eea5ca.js" crossorigin=anonymous integrity="sha384-LkS3l/eNl5lfXiAdN7SK50YQyvu0NLn1S6u3tMipaGa6LVDZSZ9S9WK6DYH7KS9M"><link rel="preload" href="/website-be6d5a0ec9eea5ca_bg.wasm" crossorigin=anonymous integrity="sha384-qZX3P/5/WaO/KbX5lyBVF/pfd4VbQ6FmxcZdqz2BS1lslidJ95hkMuEpykvaYNGc" as="fetch" type="application/wasm"><link rel="modulepreload" href="/website-9c3dd40cda362d49.js" crossorigin=anonymous integrity="sha384-MbxxGyC7DF6kbIUd4YRUM7YODhv8b8ECDKa5r14PmwOGU2IaforKv4OIi55h7IVk"><link rel="preload" href="/website-9c3dd40cda362d49_bg.wasm" crossorigin=anonymous integrity="sha384-cLUxQy7XXhxhHCX6X1AjUtF+UbqwlCPBqJ6DsGoGRm/cNbyqN2e02QqNKa7Jnd08" as="fetch" type="application/wasm"></head>
 
 <body>
     <!-- The WASM code will resize the canvas dynamically -->
@@ -133,7 +133,18 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
             });
         }
     </script>
-</body>
+
+<script type="module" nonce="vhpbOnqbbzKQGfj3eJsLlA==">
+import init, * as bindings from '/website-9c3dd40cda362d49.js';
+const wasm = await init({ module_or_path: '/website-9c3dd40cda362d49_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
 
 </html>
 
