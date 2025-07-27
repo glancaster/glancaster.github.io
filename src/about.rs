@@ -15,7 +15,7 @@ I recently graduated from Clemson University with my Master's in Mechanical Engi
 
     ui.label(RichText::new("My Skills").heading().color(Color32::WHITE));
     ui.label("Here's a list of skills that I am experienced in at various levels.");
-    ui.horizontal(|ui| {
+    ui.horizontal_wrapped(|ui| {
         for w in [
             "Programming Languages",
             "Embedded Systems",
@@ -27,7 +27,7 @@ I recently graduated from Clemson University with my Master's in Mechanical Engi
                 .show(ui, |ui| {
                     ui.vertical(|ui| {
                         ui.label(w);
-                        ui.horizontal(|ui| {
+                        ui.horizontal_wrapped(|ui| {
                             let list = match w {
                                 "Programming Languages" => vec!["Rust", "Python", "C", "C++", "C#"],
                                 "Embedded Systems" => {
