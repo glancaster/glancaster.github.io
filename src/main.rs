@@ -7,14 +7,25 @@ const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
 fn main() {
     dioxus::launch(App);
 }
+#[derive(Routable, Clone, PartialEq)]
+enum Route {
+    #[layout(NavBar)] // <---- add the #[layout] attribute
+    #[route("/")]
+    Home,
+    #[route("/tools")]
+    Tools,
+    #[route("/projects")]
+    Projects,
+    #[route("/devlog")]
+    DevLog,
+}
 
 #[component]
 fn App() -> Element {
     rsx! {
         document::Link { rel: "stylesheet", href: MAIN_CSS }
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
-        NavBar {}
-        Home {}
+        Router::<Route> {}
     }
 }
 
@@ -23,17 +34,17 @@ pub fn Home() -> Element {
     rsx! {
         div {
             class: "",
-        div {
-            class: "bg-base-100 p-10 text-center",
-            h1 {
-                "Graham Lancaster"
+            div {
+                class: "bg-base-100 py-40 text-center",
+                h1 {
+                    "Graham Lancaster"
+                }
+                h4 {
+                    "Engineer | Rustacean | Climber"
+                }
             }
-            h4 {
-                "Engineer | Rustacean | Climber"
-            }
-        }
-        div {
-            class: "flex bg-base-100 text-center",
+            div {
+            class: "flex flex-wrap md:flex-nowrap bg-base-100 text-center",
             div { class: "card bg-primary text-primary-content m-2",
                 div { class: "card-body",
                     h2 { class: "card-title", "Latest Tool" }
@@ -77,18 +88,26 @@ pub fn NavBar() -> Element {
     rsx! {
         div { class: "navbar bg-base-100 shadow-sm",
             div { class: "navbar-start",
-                a { class: "btn btn-ghost text-l", "GL" }
+                Link { to: "/",
+                    a { class: "btn btn-ghost text-l", "GL" }
+                }
             }
             div { class: "navbar-center lg:flex",
                 ul { class: "menu menu-horizontal px-1",
                     li {
-                        a { "Tools" }
+                        Link { to: "/tools",
+                            a { "Tools" }
+                        }
                     }
                     li {
-                        a { "Projects" }
+                        Link { to: "/projects",
+                            a { "Projects" }
+                        }
                     }
                     li {
-                        a { "Posts" }
+                        Link { to: "/devlog",
+                            a { "Dev Log" }
+                        }
                     }
                 }
             }
@@ -102,6 +121,80 @@ pub fn NavBar() -> Element {
                         a { class: "btn btn-ghost",
                             "G" }
                     }
+                }
+            }
+        }
+        Outlet::<Route> {}
+    }
+}
+#[component]
+fn Tools() -> Element {
+    let tools = vec![
+        "tool a", "tool b", "tool c", "tool d", "tool e", "tool f", "tool g",
+    ];
+    rsx! {
+        div {
+            class: "flex flex-row",
+        div {
+            class: "border bg-red-300 w-1/6 h-dvh p-2 flex flex-col gap-2",
+            for tool in &tools {
+                button {
+                    class: "border bg-red-500 rounded-md",
+                    "{tool}"
+                }
+            }
+
+        }
+        div {
+            class: "flex flex-wrap grow border bg-red-300 p-5 gap-4",
+            for tool in &tools {
+                button {
+                    class: "border bg-red-500 rounded-md w-1/4 grow",
+                    "{tool}"
+                }
+            }
+        }
+        }
+    }
+}
+
+#[component]
+fn Projects() -> Element {
+    let projects = vec![
+        "project a",
+        "project b",
+        "project c",
+        "project d",
+        "project e",
+        "project f",
+        "project g",
+    ];
+    rsx! {
+        div {
+            class: "flex flex-wrap grow border bg-red-300 p-5 gap-4 h-dvh",
+            for project in &projects {
+                button {
+                    class: "border bg-red-500 rounded-md w-1/4 grow",
+                    "{project}"
+                }
+            }
+        }
+
+    }
+}
+
+#[component]
+fn DevLog() -> Element {
+    let logs = vec![
+        "log a", "log b", "log c", "log d", "log e", "log f", "log g",
+    ];
+    rsx! {
+        div {
+            class: "flex flex-col grow border bg-red-300 p-5 gap-4 h-dvh",
+            for log in &logs {
+                button {
+                    class: "border bg-red-500 rounded-md h-1/3 grow",
+                    "{log}"
                 }
             }
         }

@@ -8,7 +8,7 @@ edition = "2021"
 
 [dependencies]
 daisy_rsx = "0.1.42"
-dioxus = { version = "0.6.0", features = [] }
+dioxus = { version = "0.6.0", features = ["router"] }
 
 [features]
 default = ["desktop"]
